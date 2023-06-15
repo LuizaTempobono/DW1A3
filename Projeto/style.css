@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: sans-serif;
+    font-family: 'Minecraft', sans-serif;
     box-sizing: border-box;
 }
 
@@ -11,16 +11,57 @@ body {
     height: 100vh;
 }
 
-#container {
-    height: 400px;
+#launcher {
+    height: 700px;
     width: 100%;
-    /* width: 1200px; */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-image: url("images/Background.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#title{
+    align-self: center;
+    font-family: 'Pacifico', cursive;
+    color: #1C1C1C;
+    font-size: 60px;
+    margin-top: 53px;
+}
+
+#title:hover{
+    color: #556B2F;
+}
+
+#start{
+    height: 50px;
+    width: 200px;
+    align-self: center;
+    font-size: 30px;
+    margin-top: 425px;
+    border: 2px solid #b4eb9c;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#start:hover{
+    background-color: #b4eb9c;
+    color: white;
+}
+
+#container {
+    height: 540px;
+    width: 100%;
     position: relative;
     overflow: hidden;
 }
 
 #container #dino {
-    height: 70px;
+    height: 106px;
     width: 70px;
     position: absolute;
     bottom: 28px;
@@ -28,8 +69,8 @@ body {
 }
 
 #container #dino img {
-    height: 80px;
-    width: 80px;
+    height: 120px;
+    width: 100px;
 }
 
 .dinoActive {
@@ -47,22 +88,21 @@ body {
     }
 }
 
-
 #container #ewaste {
     height: 80px;
     width: 125px;
     position: absolute;
-    bottom: 20px;
+    bottom: 32px;
     right: -125px;
 }
 
 #container #ewaste img {
-    height: 80px;
+    height: 97px;
     width: 125px;
 }
 
 .ewasteActive {
-    animation: ewasteAnimate 1s linear infinite;
+    animation: ewasteAnimate 1s linear;
 }
 
 @keyframes ewasteAnimate {
@@ -76,6 +116,33 @@ body {
     }
 }
 
+#container #ewaste2 {
+    height: 73px;
+    width: 55px;
+    position: absolute;
+    bottom: 20px;
+    right: -125px;
+}
+
+#container #ewaste2 img {
+    height: 73px;
+    width: 55px;
+}
+
+#container #ewaste3 {
+    height: 80px;
+    width: 100px;
+    position: absolute;
+    bottom: 20px;
+    right: -125px;
+}
+
+#container #ewaste3 img {
+    height: 100px;
+    width: 100px;
+}
+
+
 #container #road{
     height: 30px;
     width: 1200рх;
@@ -83,8 +150,6 @@ body {
     bottom: 0;
 }
  
-
-
 #container #road img {
     height: 30px;
     width: 2000рх;
@@ -124,4 +189,3 @@ body {
     height: 80px;
     color: #525252;
 }
-
